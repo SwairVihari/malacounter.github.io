@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <title>Mala Counter</title>
+</head>
+
+<body>
+
+    <div>
+        <p id="header">
+            Enter Your Mala Target:
+        </p>
+
+        <p id="input">
+            <input id="target" type="number">
+        </p>
+
+        <p id="counts">
+
+
+        </p>
+
+            
+        <section class="buttons">
+            <button id="complete" onclick="increase()">Mala Completed</button>
+            <!-- <button id="reset" onclick="reset()">Reset</button> -->
+        </section>
+
+        <section class="buttons">
+            <!-- <button id="complete" onclick="increase()">Mala Completed</button> -->
+            <button id="reset" onclick="reset()">Reset</button>
+        </section>
+
+        
+
+       
+
+            <p id="success">
+
+            </p>
+
+        
+    </div>
+
+    
+        <div class="counter">
+
+            <div class="head">Total Website Visit</div>
+            <div class="count">00</div>
+    
+        </div>
+    
+</body>
+
+<script>
+    var count = 0;
+    document.getElementById("counts").innerHTML = count;
+    function increase() {
+        count = count + 1;
+        document.getElementById("counts").innerHTML = count;
+
+
+        var tar = document.getElementById("target").value;
+        tar = Number(tar);
+        if (tar == count) {
+            document.getElementById("success").innerHTML = "Congratulation You have successfuly completed your target";
+
+        }
+    }
+
+    function reset() {
+        count = 0;
+        document.getElementById("counts").innerHTML = count;
+        document.getElementById("target").value = 0;
+        document.getElementById("success").innerHTML = " ";
+
+
+    }
+
+    function updateCounter() {
+    fetch('https://api.countapi.xyz/update/malacounter/harsh/?amount=1')
+        .then(res => res.json())
+        .then(data => counterElement.innerHTML = data.value)
+}
+
+updateCounter()
+
+
+
+counterElement = document.getElementsByClassName('count')[0];
+
+
+
+</script>
+
+</html>

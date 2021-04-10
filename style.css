@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(226, 226, 226);
+    font-family: 'Fredoka One', cursive;
+}
+
+div{
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#header{
+    text-align: center;
+    /* border: solid 2px red; */
+    margin: 10px;
+    padding: 5px;
+    /* font-family: 'Dela Gothic One', cursive; */
+
+}
+
+#input{
+    text-align: center;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 20px;
+
+}
+
+#counts{
+    box-shadow: 2px 2px grey;
+    font-size: 73px;
+    align-self: center;
+    align-items: center;
+    height: 178px;
+    width: 178px;
+    background-color: rgb(221, 221, 255);
+    text-align: center;
+    justify-content: center;
+    /* border: solid 2px black; */
+    border-radius: 49%;
+    margin: 10px;
+    padding-top: 91px;
+}
+
+.buttons{
+    
+    text-align: center;
+    /* border: solid 2px brown; */
+    margin: 10px;
+    padding: 5px;
+
+}
+
+#complete{
+    height: 47px;
+    width: 162px;
+    border-radius: 20px;
+    box-shadow: 2px 2px rgb(24, 22, 22);
+}
+
+#complete:hover{
+    background-color: blanchedalmond;
+}
+
+
+#reset{
+    height: 47px;
+    width: 99px;
+    border-radius: 20px;
+    box-shadow: 2px 2px rgb(24, 22, 22);
+}
+
+#reset:hover{
+    background-color: blanchedalmond;
+}
+#success{
+    text-align: center;
+    /* border: solid 2px green; */
+    margin: 10px;
+    padding: 5px;
+}
